@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACES LET Crown Challenge</title>
+  <link rel="icon" href="assets/aces-logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="aces-bg" aria-hidden="true">
+    <span>ACES</span><span>LET</span><span>GENED</span><span>PROFED</span><span>★</span><span>♛</span>
+  </div>
+
+  <section id="homeScreen" class="screen active">
+    <div class="wrap">
+      <header class="hero crest-hero">
+        <div class="hero-logo-wrap">
+          <img src="assets/aces-logo.png" alt="ACES Official Logo" class="hero-logo" />
+        </div>
+        <div class="hero-copy">
+          <div class="eyebrow">Academic Circle of Excellence and Service</div>
+          <h1>ACES LET Crown Challenge</h1>
+          <p>An official ACES review challenge for future educators preparing for the LET.</p>
+          <div class="hero-actions">
+            <button type="button" class="gold" data-action="go-setup">Start Challenge</button>
+            <button type="button" class="secondary" data-action="go-leaderboard">View Leaderboards</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="champions-grid" aria-label="Latest Weekly Crown Holders">
+        <article class="panel champion-card">
+          <div class="card-kicker">Latest Crown Holder</div>
+          <h2>Weekly ACES ProfEd Crown Holder</h2>
+          <div id="homeProfedChampion" class="leader-mini"><p class="muted">Loading crown holder...</p></div>
+        </article>
+        <article class="panel champion-card">
+          <div class="card-kicker">Latest Crown Holder</div>
+          <h2>Weekly ACES GenEd Crown Holder</h2>
+          <div id="homeGenedChampion" class="leader-mini"><p class="muted">Loading crown holder...</p></div>
+        </article>
+      </section>
+
+      <section class="panel contender-strip" aria-label="Leading Crown Contenders">
+        <div>
+          <div class="card-kicker">Next Weekly Race</div>
+          <h2>Leading Crown Contenders</h2>
+          <p class="muted">These are the current Top 1 contenders for the next weekly titles. The weekly race closes every Monday at 12:00 AM Philippine Time.</p>
+        </div>
+        <div class="mini-contender-grid">
+          <div class="mini-card">
+            <span>Leading ProfEd Crown Contender</span>
+            <strong id="homeProfedContender">Loading...</strong>
+          </div>
+          <div class="mini-card">
+            <span>Leading GenEd Crown Contender</span>
+            <strong id="homeGenedContender">Loading...</strong>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">Developed by Christian J. Angangan</footer>
+    </div>
+  </section>
+
+  <section id="setupScreen" class="screen">
+    <div class="wrap">
+      <header class="hero compact-hero">
+        <img src="assets/aces-logo.png" alt="ACES Official Logo" class="compact-logo" />
+        <div>
+          <div class="eyebrow">Player Entry</div>
+          <h1>Choose Your Crown Race</h1>
+          <p>Enter your details, take the challenge, and test your LET readiness.</p>
+        </div>
+      </header>
+
+      <div class="setup-grid">
+        <section class="panel entry-panel">
+          <h2>Player Information</h2>
+          <div class="form-grid two-fields">
+            <div>
+              <label for="studentName">Full Name</label>
+              <input id="studentName" type="text" placeholder="Example: Juan Dela Cruz" autocomplete="off" />
+            </div>
+            <div>
+              <label for="studentSection">Year & Section</label>
+              <input id="studentSection" type="text" placeholder="Example: BSEd Math 4A" autocomplete="off" />
+            </div>
+          </div>
+          <div id="entryError" class="entry-error">Please enter your full name and year & section before starting.</div>
+        </section>
+
+        <section class="panel mode-panel">
+          <h2>Crown Race Modes</h2>
+          <div class="mode-grid">
+            <button type="button" id="profedModeCard" class="mode-card selected" data-mode="profed">
+              <span class="mode-icon">🏛️</span>
+              <strong>ProfEd Crown Race</strong>
+              <small>Professional Education weekly review race</small>
+            </button>
+            <button type="button" id="genedModeCard" class="mode-card" data-mode="gened">
+              <span class="mode-icon">📚</span>
+              <strong>GenEd Crown Race</strong>
+              <small>General Education weekly review race</small>
+            </button>
+          </div>
+          <div id="modeRuleBox" class="mode-rule">Answer 10 questions and aim for the weekly crown.</div>
+          <div class="actions">
+            <button type="button" class="primary" data-action="start-game">Begin Crown Race</button>
+            <button type="button" class="secondary" data-action="go-home">Back to Homepage</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section id="gameScreen" class="screen">
+    <div class="wrap narrow">
+      <div class="panel game-panel">
+        <div class="status-bar">
+          <span id="playerPill" class="pill">Player</span>
+          <span id="modePill" class="pill">ProfEd Crown Race</span>
+          <span id="questionPill" class="pill">Question 1 of 10</span>
+          <span id="scorePill" class="pill">Score: 0</span>
+          <span id="timerPill" class="pill">Time: 0s</span>
+        </div>
+        <div class="progress"><div id="progressBar" class="bar"></div></div>
+        <div id="groupLine" class="group-line">Course</div>
+        <h2 id="questionText" class="question-text"></h2>
+        <div id="choicesBox" class="choices-box"></div>
+        <div id="feedbackBox" class="feedback"></div>
+        <div class="actions">
+          <button type="button" id="nextButton" class="primary" data-action="next-question" style="display:none;">Next Question</button>
+          <button type="button" class="danger" data-action="quit-game">Quit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultScreen" class="screen">
+    <div class="wrap">
+      <header class="hero result-hero">
+        <div class="eyebrow">Crown Race Result</div>
+        <h1>Crown Race Complete</h1>
+        <p id="resultSummary">Your result will appear here.</p>
+        <div id="scoreOrb" class="score-orb">0/10</div>
+      </header>
+
+      <div class="panel">
+        <h2 id="resultTitle">Result Summary</h2>
+        <p id="resultMessage" class="muted"></p>
+        <div id="performanceBreakdown" class="breakdown-grid"></div>
+        <div id="submitBox" class="submit-box">
+          <h2>Submit Your Score</h2>
+          <p>Submit your score to join this week's ranking.</p>
+          <div class="actions">
+            <button type="button" id="submitScoreButton" class="primary" data-action="submit-score">Submit Score to Leaderboard</button>
+            <button type="button" class="secondary" data-action="go-leaderboard">View Leaderboards</button>
+          </div>
+          <span id="submitStatus" class="submit-status">Your score has not been submitted yet.</span>
+        </div>
+        <div class="actions">
+          <button type="button" class="gold" data-action="start-game">Play Again</button>
+          <button type="button" class="secondary" data-action="go-setup">Back to Setup</button>
+          <button type="button" class="secondary" data-action="go-home">Homepage</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leaderboardScreen" class="screen">
+    <div class="wrap">
+      <header class="hero compact-hero">
+        <img src="assets/aces-logo.png" alt="ACES Official Logo" class="compact-logo" />
+        <div>
+          <div class="eyebrow">Weekly Rankings</div>
+          <h1>ACES LET Crown Challenge Leaderboards</h1>
+          <p>Rankings are based on highest score, fastest time, and earliest submission. Weekly results close every Monday at 12:00 AM Philippine Time.</p>
+        </div>
+      </header>
+
+      <div class="leaderboard-grid">
+        <section class="panel leaderboard-panel">
+          <div class="section-title-row">
+            <div>
+              <div class="card-kicker">ProfEd Crown Race</div>
+              <h2>ACES ProfEd Leaderboard</h2>
+            </div>
+            <button type="button" class="secondary small-btn" data-refresh="profed">Refresh</button>
+          </div>
+          <h3>Hall of Weekly Crown Holders</h3>
+          <p class="muted small-note">Last 5 Weekly ACES ProfEd Crown Holders</p>
+          <div id="profedChampionsList" class="table-wrap"><p class="muted">Loading...</p></div>
+          <h3>Leading Crown Contenders</h3>
+          <p class="muted small-note">Top 5 Current ProfEd Contenders</p>
+          <div id="profedContendersList" class="table-wrap"><p class="muted">Loading...</p></div>
+        </section>
+
+        <section class="panel leaderboard-panel">
+          <div class="section-title-row">
+            <div>
+              <div class="card-kicker">GenEd Crown Race</div>
+              <h2>ACES GenEd Leaderboard</h2>
+            </div>
+            <button type="button" class="secondary small-btn" data-refresh="gened">Refresh</button>
+          </div>
+          <h3>Hall of Weekly Crown Holders</h3>
+          <p class="muted small-note">Last 5 Weekly ACES GenEd Crown Holders</p>
+          <div id="genedChampionsList" class="table-wrap"><p class="muted">Loading...</p></div>
+          <h3>Leading Crown Contenders</h3>
+          <p class="muted small-note">Top 5 Current GenEd Contenders</p>
+          <div id="genedContendersList" class="table-wrap"><p class="muted">Loading...</p></div>
+        </section>
+      </div>
+
+      <div class="panel note-panel">
+        <div class="actions">
+          <button type="button" class="primary" data-action="refresh-all">Refresh All</button>
+          <button type="button" class="secondary" data-action="go-setup">Back to Setup</button>
+          <button type="button" class="secondary" data-action="go-home">Homepage</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="data/gened-questions.js"></script>
+  <script src="data/profed-questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
