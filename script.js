@@ -47,6 +47,12 @@ let timerInterval = null;
 let timerStartedAt = null;
 let latestResult = null;
 let scoreSubmitted = false;
+let autoAdvanceTimer = null;
+
+const SOUND_STORAGE_KEY = "acesSoundEnabled";
+let soundEnabled = true;
+let audioContext = null;
+let activeSoundStops = [];
 
 const $ = (id) => document.getElementById(id);
 
@@ -145,16 +151,139 @@ function buildGroupedQuiz(bank, categoryLabel, fileName) {
 
 function buildProfEdQuiz() {
   const bank = Array.isArray(window.PROFED_QUESTIONS) ? window.PROFED_QUESTIONS : [];
-  return buildGroupedQuiz(bank, "ProfEd Crown Race", "profed-questions.js");
+  return buildGroupedQuiz(bank, "ProfEd Crown Race", "q-p.js");
 }
 
 function buildGenEdQuiz() {
   const bank = Array.isArray(window.GENED_QUESTIONS) ? window.GENED_QUESTIONS : [];
-  return buildGroupedQuiz(bank, "GenEd Crown Race", "gened-questions.js");
+  return buildGroupedQuiz(bank, "GenEd Crown Race", "q-g.js");
 }
 
 function buildQuiz(mode) {
   return mode === "profed" ? buildProfEdQuiz() : buildGenEdQuiz();
+}
+
+function clearAutoAdvanceTimer() {
+  if (autoAdvanceTimer) {
+    clearTimeout(autoAdvanceTimer);
+    autoAdvanceTimer = null;
+  }
+}
+
+function getStoredSoundPreference() {
+  try {
+    return localStorage.getItem(SOUND_STORAGE_KEY) !== "off";
+  } catch {
+    return true;
+  }
+}
+
+function saveSoundPreference() {
+  try {
+    localStorage.setItem(SOUND_STORAGE_KEY, soundEnabled ? "on" : "off");
+  } catch {
+    // Ignore storage issues so sound preferences never block the website.
+  }
+}
+
+function updateSoundToggle() {
+  const toggle = $("soundToggle");
+  if (!toggle) return;
+  toggle.textContent = soundEnabled ? "Sound: ON" : "Sound: OFF";
+  toggle.setAttribute("aria-pressed", String(soundEnabled));
+}
+
+function initializeSoundPreference() {
+  soundEnabled = getStoredSoundPreference();
+  updateSoundToggle();
+}
+
+function getAudioContext() {
+  if (!soundEnabled) return null;
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return null;
+  if (!audioContext) audioContext = new AudioContextClass();
+  if (audioContext.state === "suspended") {
+    audioContext.resume().catch(() => {});
+  }
+  return audioContext;
+}
+
+function stopActiveSounds() {
+  activeSoundStops.forEach((stopSound) => {
+    try {
+      stopSound();
+    } catch {
+      // Ignore already-finished sounds.
+    }
+  });
+  activeSoundStops = [];
+}
+
+function playToneSequence(tones) {
+  const context = getAudioContext();
+  if (!context) return;
+
+  try {
+    stopActiveSounds();
+    const startAt = context.currentTime + 0.01;
+
+    tones.forEach((tone) => {
+      const oscillator = context.createOscillator();
+      const gain = context.createGain();
+      const delay = tone.delay || 0;
+      const duration = tone.duration || 0.08;
+      const volume = tone.volume || 0.045;
+      const toneStart = startAt + delay;
+      const toneEnd = toneStart + duration;
+
+      oscillator.type = tone.type || "sine";
+      oscillator.frequency.setValueAtTime(tone.frequency, toneStart);
+      gain.gain.setValueAtTime(0.0001, toneStart);
+      gain.gain.exponentialRampToValueAtTime(volume, toneStart + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.0001, toneEnd);
+
+      oscillator.connect(gain);
+      gain.connect(context.destination);
+      oscillator.start(toneStart);
+      oscillator.stop(toneEnd + 0.02);
+
+      activeSoundStops.push(() => oscillator.stop());
+      window.setTimeout(() => {
+        oscillator.disconnect();
+        gain.disconnect();
+      }, Math.ceil((delay + duration + 0.08) * 1000));
+    });
+  } catch {
+    // Sound should never interrupt quiz or leaderboard functionality.
+  }
+}
+
+function playSound(type) {
+  if (!soundEnabled) return;
+
+  const soundMap = {
+    click: [{ frequency: 520, duration: 0.045, type: "triangle", volume: 0.032 }],
+    correct: [
+      { frequency: 660, duration: 0.075, type: "sine", volume: 0.045 },
+      { frequency: 880, duration: 0.095, delay: 0.07, type: "sine", volume: 0.045 }
+    ],
+    incorrect: [{ frequency: 220, duration: 0.16, type: "sine", volume: 0.04 }],
+    complete: [
+      { frequency: 523.25, duration: 0.08, type: "sine", volume: 0.042 },
+      { frequency: 659.25, duration: 0.08, delay: 0.08, type: "sine", volume: 0.042 },
+      { frequency: 783.99, duration: 0.14, delay: 0.16, type: "sine", volume: 0.046 }
+    ]
+  };
+
+  playToneSequence(soundMap[type] || soundMap.click);
+}
+
+function toggleSound() {
+  soundEnabled = !soundEnabled;
+  saveSoundPreference();
+  updateSoundToggle();
+  if (soundEnabled) playSound("click");
 }
 
 function getPHTParts(date = new Date()) {
@@ -301,6 +430,7 @@ function setMode(mode) {
 }
 
 function startGame() {
+  clearAutoAdvanceTimer();
   const player = getPlayerInfo();
   if (!player.name || !player.section) {
     $("entryError").classList.add("show");
@@ -340,6 +470,7 @@ function updateTimer() {
 }
 
 function renderQuestion() {
+  clearAutoAdvanceTimer();
   const question = currentQuiz[currentQuestionIndex];
   answeredCurrentQuestion = false;
   $("questionPill").textContent = `Question ${currentQuestionIndex + 1} of ${QUIZ_LENGTH}`;
@@ -349,7 +480,7 @@ function renderQuestion() {
   $("questionText").textContent = question.question;
   $("feedbackBox").className = "feedback";
   $("feedbackBox").textContent = "";
-  $("nextButton").style.display = "none";
+  if ($("nextButton")) $("nextButton").style.display = "none";
 
   $("choicesBox").innerHTML = question.choices.map((choice, index) => `
     <button type="button" class="choice-btn" data-choice-index="${index}">
@@ -369,6 +500,7 @@ function answerQuestion(choiceIndex) {
   );
   const isCorrect = normalizeAnswerText(selectedAnswerText) === normalizeAnswerText(correctAnswerText);
   if (isCorrect) currentScore++;
+  playSound(isCorrect ? "correct" : "incorrect");
 
   document.querySelectorAll(".choice-btn").forEach((button) => {
     const index = Number(button.dataset.choiceIndex);
@@ -384,10 +516,16 @@ function answerQuestion(choiceIndex) {
     ? "Correct!"
     : `Incorrect. Correct answer: ${String.fromCharCode(65 + correctDisplayIndex)}. ${correctAnswerText}`;
 
-  $("nextButton").style.display = "inline-flex";
+  if ($("nextButton")) $("nextButton").style.display = "none";
+
+  autoAdvanceTimer = setTimeout(() => {
+    autoAdvanceTimer = null;
+    nextQuestion();
+  }, 650);
 }
 
 function nextQuestion() {
+  clearAutoAdvanceTimer();
   if (!answeredCurrentQuestion) {
     alert("Please select an answer first.");
     return;
@@ -401,6 +539,7 @@ function nextQuestion() {
 }
 
 function finishGame() {
+  clearAutoAdvanceTimer();
   clearInterval(timerInterval);
   const timeSeconds = Math.floor((Date.now() - timerStartedAt) / 1000);
   const player = getPlayerInfo();
@@ -435,11 +574,13 @@ function finishGame() {
   $("submitScoreButton").disabled = false;
   $("submitStatus").textContent = "Your score has not been submitted yet.";
   showScreen("resultScreen");
+  playSound("complete");
 }
 
 function quitGame() {
   const confirmQuit = confirm("Quit this Crown Race and return to setup?");
   if (!confirmQuit) return;
+  clearAutoAdvanceTimer();
   clearInterval(timerInterval);
   showScreen("setupScreen");
 }
@@ -738,9 +879,17 @@ async function refreshAllLeaderboards() {
 
 function attachEventListeners() {
   document.addEventListener("click", async (event) => {
+    const soundToggle = event.target.closest("#soundToggle");
+    if (soundToggle) {
+      event.preventDefault();
+      toggleSound();
+      return;
+    }
+
     const modeCard = event.target.closest(".mode-card[data-mode]");
     if (modeCard) {
       event.preventDefault();
+      playSound("click");
       setMode(modeCard.dataset.mode);
       return;
     }
@@ -755,6 +904,7 @@ function attachEventListeners() {
     const refreshButton = event.target.closest("[data-refresh]");
     if (refreshButton) {
       event.preventDefault();
+      playSound("click");
       await loadLeaderboards();
       return;
     }
@@ -763,6 +913,7 @@ function attachEventListeners() {
     if (!actionButton) return;
 
     event.preventDefault();
+    playSound("click");
     const action = actionButton.dataset.action;
 
     try {
@@ -793,6 +944,7 @@ function attachEventListeners() {
 }
 
 async function boot() {
+  initializeSoundPreference();
   attachEventListeners();
   setMode("profed");
   await initFirebase();
