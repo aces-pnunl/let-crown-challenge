@@ -473,3 +473,36 @@ tr:last-child td { border-bottom:0; }
   .status-bar { display:grid; grid-template-columns:1fr 1fr; }
   table { min-width:560px; }
 }
+
+
+.sound-toggle {
+  position:fixed;
+  top:14px;
+  right:14px;
+  z-index:20;
+  min-height:38px;
+  width:auto;
+  padding:9px 13px;
+  border-radius:999px;
+  color:#2e2100;
+  background:linear-gradient(135deg, var(--gold-2), var(--gold));
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 12px 26px rgba(4,22,79,.18);
+  font-size:.86rem;
+  font-weight:950;
+}
+.sound-toggle[aria-pressed="false"] {
+  color:var(--royal);
+  background:#eef3ff;
+  border-color:rgba(0,31,143,.18);
+}
+@media (max-width:560px) {
+  .sound-toggle {
+    width:auto;
+    min-height:34px;
+    padding:8px 11px;
+    font-size:.78rem;
+    top:10px;
+    right:10px;
+  }
+}
