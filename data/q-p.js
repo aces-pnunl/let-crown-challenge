@@ -3891,7 +3891,7 @@ window.PROFED_QUESTIONS = [
 */
   {
     "group": "Documentation of Experiential Learning",
-    "question": "1. Which experiential learning course does a pre-service teacher observe teaching-learning transaction in actual school environment?",
+    "question": "Which experiential learning course does a pre-service teacher observe teaching-learning transaction in actual school environment?",
     "choices": [
       "Field Study 1",
       "Field Study 2",
@@ -3902,7 +3902,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "2. Which should NOT be assigned to field study students enrolled in Field Study 2?",
+    "question": "Which should NOT be assigned to field study students enrolled in Field Study 2?",
     "choices": [
       "Substitute for an absent teacher.",
       "Assist a teacher in a limited actual teaching-learning activities.",
@@ -3913,7 +3913,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "3. Why are observations done during the first week of internship?",
+    "question": "Why are observations done during the first week of internship?",
     "choices": [
       "For the practice teachers to be immersed in the class",
       "To establish rapport with students",
@@ -3924,7 +3924,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "4. Which is a blueprint of the daily instructional activities of the teacher?",
+    "question": "Which is a blueprint of the daily instructional activities of the teacher?",
     "choices": [
       "Learning Plan",
       "Learning Content",
@@ -3935,7 +3935,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "5. Why is a Learning Plan important?",
+    "question": "Why is a Learning Plan important?",
     "choices": [
       "It guides the teachers in her/his daily activities.",
       "It keeps teachers on cue.",
@@ -3946,7 +3946,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "6. What statement is true about planning for a lesson?",
+    "question": "What statement is true about planning for a lesson?",
     "choices": [
       "The learning plan reflects the teacher's competence.",
       "The more you plan the more you become flexible.",
@@ -3957,7 +3957,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "7. You prepared a PowerPoint presentation on food web for your Science class, however, there was a power cut-off, which should you do?",
+    "question": "You prepared a PowerPoint presentation on food web for your Science class, however, there was a power cut-off, which should you do?",
     "choices": [
       "Use the available materials in class.",
       "Go to another lesson.",
@@ -3968,7 +3968,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "8. Ms. Karunungan felt slighted when she read comments about her portfolio she uploaded in a website. Is her feeling justified?",
+    "question": "Ms. Karunungan felt slighted when she read comments about her portfolio she uploaded in a website. Is her feeling justified?",
     "choices": [
       "No, when one decides to \"go public\" with their teaching invites comments from their peers so that she can build successes on it.",
       "Yes, because she uploaded her portfolio to refine her teaching skills and philosophies.",
@@ -3979,7 +3979,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "9. What will be the most effective way of dealing with non-participative students?",
+    "question": "What will be the most effective way of dealing with non-participative students?",
     "choices": [
       "Employ engaging and enjoyable activities.",
       "Let them do what pleases them.",
@@ -3990,7 +3990,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "10. How will you use the leadership skills of some of your students for the benefit of the class?",
+    "question": "How will you use the leadership skills of some of your students for the benefit of the class?",
     "choices": [
       "Allow them to initiate activities in class.",
       "Recognize their leadership skills.",
@@ -4001,7 +4001,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "11. Which group of activities can be carried out for interns to learn how to build networks and linkages?",
+    "question": "Which group of activities can be carried out for interns to learn how to build networks and linkages?",
     "choices": [
       "I, II, and III",
       "II, III, and IV",
@@ -4012,7 +4012,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "12. What must you do to cost-save on devices while preparing materials for the activity?",
+    "question": "What must you do to cost-save on devices while preparing materials for the activity?",
     "choices": [
       "Use indigenous materials.",
       "Get sponsors.",
@@ -4023,7 +4023,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "13. Which is the best way to minimize a noisy learner in class who is showing off his new pair of shoes?",
+    "question": "Which is the best way to minimize a noisy learner in class who is showing off his new pair of shoes?",
     "choices": [
       "Say \"Nice shoes\" and quickly go back to class.",
       "Call the learner's name in class.",
@@ -4034,7 +4034,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "14. Which is the best way to find out why a learner is always absent in class?",
+    "question": "Which is the best way to find out why a learner is always absent in class?",
     "choices": [
       "Call the parent/guardian.",
       "Report to the Guidance Counselor.",
@@ -4045,7 +4045,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "15. Why is feedback on a practice teacher's performance important?",
+    "question": "Why is feedback on a practice teacher's performance important?",
     "choices": [
       "To promote learning",
       "To promote students",
@@ -4056,7 +4056,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "16. What must teacher Jay do to prevent subjectivity in rating authentic tasks?",
+    "question": "What must teacher Jay do to prevent subjectivity in rating authentic tasks?",
     "choices": [
       "Use scoring rubric",
       "Ask someone to validate your grades",
@@ -4067,7 +4067,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "17. How can university/college-school partnership be enhanced during an internship?",
+    "question": "How can university/college-school partnership be enhanced during an internship?",
     "choices": [
       "Create opportunities for your college supervisor and your cooperating teacher to meet during post conferences.",
       "Invite your college supervisor to have a demonstration teaching in the partner school.",
@@ -4078,7 +4078,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "18. What do field study students (FSS) expect from the Resource Teacher (RT) to be able to identify different classroom management strategies?",
+    "question": "What do field study students (FSS) expect from the Resource Teacher (RT) to be able to identify different classroom management strategies?",
     "choices": [
       "RT will conduct a demonstration lesson and a post conference focusing on the classroom management strategies",
       "FSS must be allowed to handle a class to experience how to manage a class",
@@ -4089,7 +4089,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "19. Why are hands-on activities for learners?",
+    "question": "Why are hands-on activities for learners?",
     "choices": [
       "To acquire concrete experience",
       "To develop self-esteem",
@@ -4100,7 +4100,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "20. Why do I need to submit all the required forms and requirements before leaving my Cooperating School?",
+    "question": "Why do I need to submit all the required forms and requirements before leaving my Cooperating School?",
     "choices": [
       "To leave the school with a clean slate",
       "To uphold my dignity as a teacher",
@@ -4111,7 +4111,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "21. Which is the least important aspect to be included for the orientation in Internship?",
+    "question": "Which is the least important aspect to be included for the orientation in Internship?",
     "choices": [
       "Graduate attributes",
       "School facilities",
@@ -4122,7 +4122,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "22. Why is there a need to conduct orientation sessions for Internship?",
+    "question": "Why is there a need to conduct orientation sessions for Internship?",
     "choices": [
       "To make the practice teachers ready",
       "To avoid future problems",
@@ -4133,7 +4133,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "23. Why should you be present during the first week of internship?",
+    "question": "Why should you be present during the first week of internship?",
     "choices": [
       "To familiarize with the school's practices",
       "To know evaluate experiences",
@@ -4144,7 +4144,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "24. Which group of ideas characterize Field Study Courses and Internship?",
+    "question": "Which group of ideas characterize Field Study Courses and Internship?",
     "choices": [
       "I.II and IV",
       "II and III",
@@ -4155,7 +4155,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "25. Which assessment task is aligned to this competency: \"Identify classroom routines\"",
+    "question": "Which assessment task is aligned to this competency: \"Identify classroom routines\"",
     "choices": [
       "Enumerating tasks being done by students every day to see the pattern",
       "Suggesting routines in classroom management plan",
@@ -4166,7 +4166,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "26. One of the objectives of teaching internship is to gain experience working with students from different cultural and socioeconomic backgrounds. How will you achieve this objective?",
+    "question": "One of the objectives of teaching internship is to gain experience working with students from different cultural and socioeconomic backgrounds. How will you achieve this objective?",
     "choices": [
       "Apply strategies that will allow students to understand multiple perspectives",
       "Create groups of students according to their socio-economic backgrounds.",
@@ -4177,7 +4177,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "27. Mr. Honor allows his practice teachers to use the laboratory equipment in the Chemistry Laboratory after demonstrating to them how to operate these pieces of equipment. This is in preparation for teaching a unit. For his PTs, it was their first time to use a real compound microscope and saw the cross section of a leaf. What kind of experience have they encountered?",
+    "question": "Mr. Honor allows his practice teachers to use the laboratory equipment in the Chemistry Laboratory after demonstrating to them how to operate these pieces of equipment. This is in preparation for teaching a unit. For his PTs, it was their first time to use a real compound microscope and saw the cross section of a leaf. What kind of experience have they encountered?",
     "choices": [
       "Concrete experience",
       "Reflective experience",
@@ -4188,7 +4188,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "28. After seeing different specimens under the microscope, the interns have a better understanding of concepts related to the cells and they were able to unlearn some of their misconceptions. In which phase of experiential learning were the interns operating?",
+    "question": "After seeing different specimens under the microscope, the interns have a better understanding of concepts related to the cells and they were able to unlearn some of their misconceptions. In which phase of experiential learning were the interns operating?",
     "choices": [
       "Abstract conceptualization",
       "Concrete experience",
@@ -4199,7 +4199,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "29. Mr. Honor asked his interns to design activities for all the students in their class to experience all the activities despite insufficient number of materials for the whole class. The interns thought of \"station rotation\" as one of the strategies they have learned from YouTube. What experiential phase is described in the situation?",
+    "question": "Mr. Honor asked his interns to design activities for all the students in their class to experience all the activities despite insufficient number of materials for the whole class. The interns thought of \"station rotation\" as one of the strategies they have learned from YouTube. What experiential phase is described in the situation?",
     "choices": [
       "Active experimentation",
       "Concrete experience",
@@ -4210,7 +4210,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "30. Analyzing the portfolio entries of four teachers during their internship, who among the practice teachers has reached abstract conceptualization?",
+    "question": "Analyzing the portfolio entries of four teachers during their internship, who among the practice teachers has reached abstract conceptualization?",
     "choices": [
       "While observing a SPED teacher use positive discipline in a teaching episode during a demonstration teaching, Jane connects this observation on what she understands about behaviorist theories.",
       "Attending to children with visual impairment Carlos approximates the idea of zone of proximal development and multisensory learning.",
@@ -4221,7 +4221,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "31. Which list of documents provide evidence of teaching effectiveness during internship?",
+    "question": "Which list of documents provide evidence of teaching effectiveness during internship?",
     "choices": [
       "Scores on standardized or other tests, before and after instruction, Students' papers, essays, or creative works, Graded work from the best and poorest students, with teacher's feedback to students, Intern's written feedback on student work",
       "Design of new courses, Design of interdisciplinary or collaborative courses or teaching projects, Use of new methods of teaching, assessing learning, grading",
@@ -4232,7 +4232,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "32. During the observation week, James took notice of the efficient student-led activities being done every day like checking of attendance, health check and distribution of materials. He wrote his insights in his reflective journal. How will James label this entry in his journal?",
+    "question": "During the observation week, James took notice of the efficient student-led activities being done every day like checking of attendance, health check and distribution of materials. He wrote his insights in his reflective journal. How will James label this entry in his journal?",
     "choices": [
       "Classroom Routines and Self-Regulation",
       "Joyful Learning",
@@ -4243,7 +4243,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "33. How will you make the organization of your teaching portfolio explicit to the reader?",
+    "question": "How will you make the organization of your teaching portfolio explicit to the reader?",
     "choices": [
       "Use a table of contents and tabs to separate the various components of your portfolio.",
       "Present pictures of instructional materials you have created.",
@@ -4254,7 +4254,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "34. Your cooperating teacher asked you to make a summary of class attendance in the preceding week. Which document will help you do the task?",
+    "question": "Your cooperating teacher asked you to make a summary of class attendance in the preceding week. Which document will help you do the task?",
     "choices": [
       "School Form 2",
       "School Form 1",
@@ -4265,7 +4265,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "35. What set of information is entered in SF 9, Learner Progress Report Card?",
+    "question": "What set of information is entered in SF 9, Learner Progress Report Card?",
     "choices": [
       "individual academic performance, behavior and attendance",
       "enrollment count, number of students who transferred in/out, number of students who dropped out",
@@ -4276,7 +4276,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "36. What should be presented if the Principal would want to know the names of students enrolled in a class?",
+    "question": "What should be presented if the Principal would want to know the names of students enrolled in a class?",
     "choices": [
       "School Form 1",
       "School Form 2",
@@ -4287,7 +4287,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "37. What can you learn from the Resource Teacher's compilation of rubrics, worksheets, test results in the implementation of LDM (Learning Delivery Modalities)?",
+    "question": "What can you learn from the Resource Teacher's compilation of rubrics, worksheets, test results in the implementation of LDM (Learning Delivery Modalities)?",
     "choices": [
       "assessment practices",
       "instructional practices",
@@ -4298,7 +4298,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "38. Why should you attend the pre-observation conference called by the Resource Teacher in your Field Study courses?",
+    "question": "Why should you attend the pre-observation conference called by the Resource Teacher in your Field Study courses?",
     "choices": [
       "because expectations about the demonstration teaching need to be managed",
       "because attendance is strictly monitored",
@@ -4309,7 +4309,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "39. Which practice violates implementing rules and procedures in handling bullying incidents in schools?",
+    "question": "Which practice violates implementing rules and procedures in handling bullying incidents in schools?",
     "choices": [
       "The school has no disciplinary action against the bully or offending student because the report was filed by an anonymous complainant.",
       "The principal brought the bullying incident for amicable settlement before the Barangay.",
@@ -4320,18 +4320,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "40. There is one component in the Teaching Portfolio that contains evidence of your contributions to the teaching profession or to your Institution. What set of evidence should you include?",
-    "choices": [
-      "II, III, IV, V",
-      "I, II, III, VI",
-      "I, II, IV, V",
-      "III, IV, V, VI"
-    ],
-    "answer": 0
-  },
-  {
-    "group": "Documentation of Experiential Learning",
-    "question": "41. Jose reviews his portfolio and finds fulfillment in seeing how he has improved his teaching skills since then. He started out as one who recorded his observations up to the time when he tried out a strategy and innovated on it. How does Jose view his portfolio?",
+    "question": "Jose reviews his portfolio and finds fulfillment in seeing how he has improved his teaching skills since then. He started out as one who recorded his observations up to the time when he tried out a strategy and innovated on it. How does Jose view his portfolio?",
     "choices": [
       "He views his portfolio that offers a look at development over time.",
       "He views his portfolio as a way of assessing his teaching effectiveness.",
@@ -4342,7 +4331,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "42. Which task can a practice teacher politely decline?",
+    "question": "Which task can a practice teacher politely decline?",
     "choices": [
       "Look for funds so that hard copy of the modules can be reproduced",
       "Conduct classroom based action research (CBAR) on a specific teaching-learning area",
@@ -4353,7 +4342,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "43. Jomar's college supervisor advised him to start early on his teaching portfolio as he goes along Internship. Must Jomar heed the advice?",
+    "question": "Jomar's college supervisor advised him to start early on his teaching portfolio as he goes along Internship. Must Jomar heed the advice?",
     "choices": [
       "Yes, collecting and documenting evidence for each component will make assembling the final portfolio easier.",
       "Yes, so that he will not be asked to extend his stay in the cooperating school.",
@@ -4364,7 +4353,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "44. Why is being reflective important while observing a resource teacher demonstrates a particular strategy?",
+    "question": "Why is being reflective important while observing a resource teacher demonstrates a particular strategy?",
     "choices": [
       "so that any inconsistencies between experience and understanding can be addressed",
       "so that all important aspects of the lesson can be recorded",
@@ -4375,7 +4364,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "45. Susan wrote this entry in her reflective journal: Today, I used a lung model in class to show how the different organs involved in respiration work. I thought my students will find the lesson boring. On the contrary, they were all engaged and enthusiastic in observing how the two balloons represent the lungs as they expand and contract. Now I realized Vygotsky's \"zone of proximal development\" as function as the \"more knowledgeable other\" in teaching them the concept. Did Susan take the students through the whole process of Experiential Learning?",
+    "question": "Susan wrote this entry in her reflective journal: Today, I used a lung model in class to show how the different organs involved in respiration work. I thought my students will find the lesson boring. On the contrary, they were all engaged and enthusiastic in observing how the two balloons represent the lungs as they expand and contract. Now I realized Vygotsky's \"zone of proximal development\" as function as the \"more knowledgeable other\" in teaching them the concept. Did Susan take the students through the whole process of Experiential Learning?",
     "choices": [
       "No, Susan did not use the lung model for students to experiment or to test the newly created concepts.",
       "Yes, each process in the experiential learning sequence has been carried out during the lesson.",
@@ -4386,7 +4375,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "46. Four teachers expressed their views about mentoring practice teachers. Who can best support practice teachers in the experiential learning program?",
+    "question": "Four teachers expressed their views about mentoring practice teachers. Who can best support practice teachers in the experiential learning program?",
     "choices": [
       "Mr. Ruvi: Mentoring is a process in which trust is built to develop mentor-mentee relationships.",
       "Ms. Lopez: Mentoring works best if practice teachers are receptive and follow all my advice.",
@@ -4397,18 +4386,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "47. Which set of attributes qualify a teacher to be a cooperating teacher?",
-    "choices": [
-      "I, III, and V",
-      "I, II, III and IV",
-      "I, III, IV and V",
-      "II, III and IV"
-    ],
-    "answer": 0
-  },
-  {
-    "group": "Documentation of Experiential Learning",
-    "question": "48. What is at the core of South East Asia Competency Framework for Teachers?",
+    "question": "What is at the core of South East Asia Competency Framework for Teachers?",
     "choices": [
       "effective teachers",
       "joyful learners",
@@ -4419,7 +4397,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "49. Which element is the least important in the statement of your teaching philosophy?",
+    "question": "Which element is the least important in the statement of your teaching philosophy?",
     "choices": [
       "The ways in which your cooperating teacher creates an inclusive learning environment",
       "Your conception of how learning occurs",
@@ -4430,7 +4408,7 @@ window.PROFED_QUESTIONS = [
   },
   {
     "group": "Documentation of Experiential Learning",
-    "question": "50. How will you write your statement of teaching philosophy?",
+    "question": "How will you write your statement of teaching philosophy?",
     "choices": [
       "Illustrate your willingness to learn from your students and colleagues.",
       "Use jargon and technical terms to impress the readers.",
